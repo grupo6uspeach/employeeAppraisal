@@ -5,18 +5,58 @@ Vue.use(Vuex);
 
 var sliders = [
     {
-      label: "Pró Atividade",
-      model: "proAtividade"
+        label: "Comprometimento",
+        model: "comprometimento"
     },
     {
-      label: "Colaboração em equipe",
-      model: "colaboracaoEquipe"
+        label: "Proatividade",
+        model: "proAtividade"
     },
     {
-      label: "Liderança",
-      model: "lideranca"
-    }
-  ];
+        label: "Colaboração",
+        model: "colaboracao"
+    },
+    {
+        label: "Liderança",
+        model: "lideranca"
+    },
+    {
+        label: "Agir como dono",
+        model: "agirComoDono"
+    },
+    {
+        label: "Autodidatismo",
+        model: "autodidatismo"
+    },
+    {
+        label: "Resultado",
+        model: "resultado"
+    },
+    {
+        label: "Qualidade",
+        model: "qualidade"
+    },
+    {
+        label: "Pontualidade",
+        model: "pontualidade"
+    },
+    {
+        label: "Eficiência",
+        model: "eficiencia"
+    },
+    {
+        label: "Transparência",
+        model: "transparencia"
+    },
+    {
+        label: "Engajamento",
+        model: "engajamento"
+    },
+    {
+        label: "Aderência aos valores da empresa",
+        model: "aderenciaAosValoresDaEmpresa"
+    },
+];
 export const store = new Vuex.Store({
     state: {
         sidebar: true,

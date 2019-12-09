@@ -1,5 +1,5 @@
 <template>
-  <div class="row justify-content-center vertical-center" style="left: 27.5%" v-if="show">
+  <div class="row justify-content-center" style="left: 27.5%" v-if="show">
     <div class="card">
       <div class="card-body p-5" style="width: 60vw !important">
         <p class="main pt-5">{{funcionario}}</p>

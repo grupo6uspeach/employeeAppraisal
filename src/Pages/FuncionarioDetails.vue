@@ -1,5 +1,5 @@
 <template>
-  <div class="row justify-content-center vertical-center" style="left: 27.5%" v-if="show">
+  <div class="row justify-content-center" style="left: 27.5%" v-if="show">
     <!-- <div class="secondary">
       <p class="text-muted" v-if="linguagem == 'pt'">
         <span class="text-info">brunofurquimc@gmail.com</span> - São Paulo, SP, Brasil - 04140-110

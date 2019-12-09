@@ -1,5 +1,5 @@
 <template>
-  <div class="row justify-content-center vertical-center" style="left: 27.5%" v-if="show">
+  <div class="row justify-content-center" style="left: 27.5%" v-if="show">
     <!-- <div class="secondary">
       <p class="text-muted" v-if="linguagem == 'pt'">
         <span class="text-info">brunofurquimc@gmail.com</span> - São Paulo, SP, Brasil - 04140-110
@@ -21,6 +21,9 @@
         </div>
 
         <button class="btn-lg btn-outline-info btn mt-5 float-right" @click="adicionar">Adicionar</button>
+        <a :href="url" target="_blank" download>
+          <button class="btn-lg btn-outline-info btn mt-5 float-left">Gerar Relatório</button>
+        </a>
       </div>
     </div>
   </div>
@@ -30,14 +33,14 @@
 import VueSlider from "vue-slider-component";
 import "vue-slider-component/theme/antd.css";
 export default {
-  mounted() {   
+  mounted() {
     this.funcionario = this.$route.params.funcionario;
     this.sliders = this.$store.getters.sliders;
 
-    this.sliders.forEach((elem) => {
+    this.sliders.forEach(elem => {
       this.$data[elem.model] = 0;
       elem.model = this.$data[elem.model];
-    })
+    });
     this.scrollToTop();
     if (this.$store.getters.vw < 1023) {
       if (this.$store.getters.sidebar == true)
@@ -49,6 +52,7 @@ export default {
   data() {
     return {
       mes: "",
+      url: 'relatorio_sistema_avaliacao.xlsx',
       options: {
         dotSize: 14,
         width: "auto",
@@ -101,18 +105,18 @@ export default {
     }
   },
   methods: {
-      adicionar() {
-          this.$toast.success("Avaliação adicionada", "Sucesso", {
-            position: "topRight"
-          });
-          this.$router.push({path: `/FuncionarioDetalhes/${this.funcionario}`});
-      },
+    adicionar() {
+      this.$toast.success("Avaliação adicionada", "Sucesso", {
+        position: "topRight"
+      });
+      this.$router.push({ path: `/FuncionarioDetalhes/${this.funcionario}` });
+    },
     scrollToTop() {
       window.scrollTo(0, 0);
-    }
+    },
+    gerarRelatorio() {}
   },
-  watch: {
-  }
+  watch: {}
 };
 </script>
 
